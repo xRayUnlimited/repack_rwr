@@ -1,7 +1,7 @@
 class Api::ItemsController < ApplicationController
     before_action :set_tem, only: [:update, :destroy]
     def index
-        render json: Item.all
+        render json: Item.order(:created_at)
     end
 
     def create
@@ -26,7 +26,7 @@ class Api::ItemsController < ApplicationController
 
     private
     def item_params
-        prams.require(:item).permit(:name, :complete)
+        params.require(:item).permit(:name, :complete)
     end
 
     def set_item

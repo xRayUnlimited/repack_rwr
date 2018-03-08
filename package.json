@@ -1,0 +1,12 @@
+{
+  "name": "rwr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:xRayUnlimited/repack_rwr.git",
+  "author": "Ray Suyoto <ray.suy@icloud.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "cd client && npm install && npm run build && cd ..",
+    "deploy": "cp -a client/build/. public/"
+  }
+}
